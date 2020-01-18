@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <com.mapbox.mapboxsdk.maps.MapView
+        android:id="@+id/mapView"
+        android:layout_width="414dp"
+        android:layout_height="676dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+
+    </com.mapbox.mapboxsdk.maps.MapView>
+
+    <androidx.coordinatorlayout.widget.CoordinatorLayout
+
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/styleButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom|right"
+            android:clickable="true"
+            android:onClick="togglemapStyle"
+            android:translationY="-130dp"
+            app:backgroundTint="#BF636363"
+            app:srcCompat="?attr/actionModeCopyDrawable" />
+
+        <com.google.android.material.bottomappbar.BottomAppBar
+            android:id="@+id/optionBar"
+            style="@style/Widget.MaterialComponents.BottomAppBar.Colored"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:clipChildren="false"
+            app:backgroundTint="#3F51B5"
+            app:fabAlignmentMode="center"
+            app:fabCradleMargin="80dp"
+            app:fabCradleRoundedCornerRadius="80dp"
+            app:fabCradleVerticalOffset="80dp"
+            app:navigationIcon="@mipmap/ic_launcher_round" />
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/floatingActionButton"
+            android:layout_width="77dp"
+            android:layout_height="123dp"
+            android:layout_gravity="bottom|center"
+            android:clickable="true"
+            android:foreground="@drawable/ic_navigation_black_48dp"
+            android:onClick="startNav"
+            app:backgroundTint="#F44336"
+            app:fabSize="normal"
+            app:layout_anchorGravity="bottom" />
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/locationButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom|right"
+            android:clickable="true"
+            android:onClick="locButtonClick"
+            android:translationY="-70dp"
+            app:backgroundTint="#BF636363"
+            app:srcCompat="@android:drawable/ic_menu_compass" />
+    </androidx.coordinatorlayout.widget.CoordinatorLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
